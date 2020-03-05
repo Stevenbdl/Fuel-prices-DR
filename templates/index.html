@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/parallax.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet"> 
+
+    <title>Fuel prices DR</title>
+</head>
+<body>
+    <div class="main-section" id="main-section">
+        <img class="flag" src="static/imgs/dr.svg" width="300px" height="200px">
+        <i class="fas fa-gas-pump fuel"></i>
+        <i class="fas fa-dollar-sign dollar"></i>
+        <i onclick="window.location.href='#fuels-table' " class="fas fa-chevron-down arrow-main-section"></i>
+    </div>
+
+    
+    <div class="fuel-prices" id="fuels-table">
+        <h1>Fuels with their respective prices.</h1>
+        <div class="table-container" id="table-container">
+            <table>
+                <tr class="head">
+                    <td class="fuel-field head-item">Fuel name</td>
+                    <td class="price-field head-item">Price</td>
+                </tr>
+                {% for f, p in data %}
+                    <tr>
+                        <td class="fuel-name">{{ f }}</td>
+                        <td class="price-name">{{ p }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+</body>
+</html>

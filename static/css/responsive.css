@@ -1,0 +1,12 @@
+@media (max-width:600px){
+    .fuel, .dollar{
+        font-size: 300px;
+        padding-top: 150px;
+    }
+}
+
+@media (max-width:400px){
+    .fuel, .dollar{
+        font-size: 200px;
+    }
+}

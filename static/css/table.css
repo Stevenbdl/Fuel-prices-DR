@@ -1,0 +1,33 @@
+.table-container{
+    padding-top: 100px;
+}
+
+table, th, td{
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td:not(.head-item){
+    color: #fff;
+}
+th, td{
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: #cf0821;
+}
+tr:not(.head):nth-child(odd){
+    background-color: #002962;
+}
+
+.fuel-field, .price-field, .fuel-name, .price-name{/*font family and font styles*/
+    font-family: 'Oxanium', cursive;
+    font-size: 20px;
+}

@@ -1,0 +1,16 @@
+/*Animations classes*/
+.showTable{
+    animation-name: showTableAnimation;
+    animation-duration: 1s;
+}
+
+@keyframes showTableAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
